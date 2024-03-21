@@ -1,0 +1,35 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// RWD斷點
+
+@mixin rwd($breakpoint: mobile) {
+    @if $breakpoint == mobile {
+        @media (max-width: 20px) {
+            @content;
+        }
+    } @else if $breakpoint == sm {
+        @media (max-width: $sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (max-width: $md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (max-width: $lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (max-width: $xl) {
+            @content;
+        }
+    } @else if $breakpoint == xxl {
+        @media (max-width: $xxl) {
+            @content;
+        }
+    }
+}
